@@ -1,0 +1,156 @@
+.regPage{
+    height: 100vh;
+    width: 100vw;
+    //border: 1px solid red;
+}
+
+.pageContent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContent{
+    height: 90%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 2%;
+}
+.leftContent{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //border: 1px solid orange;
+
+}
+
+.formContent{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //border: 1px solid hotpink;
+}
+
+.fundoologo{
+    font-size: 22px;
+    font-weight: bold;
+    height: 6%;
+    
+}
+.logoText{
+    font-size: 18px;
+    height: 5%;
+}
+.heading{
+    font-size: 16px;
+    height: 5%;
+}
+.nameBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+    height: 18%;
+    width: 100%;
+}
+.firstNameClass{
+    width: 45%;
+}
+.emailBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 12%;
+    width: 100%;
+}
+.usernameBlock{
+    height: 95%;
+
+}
+.passwordBlock{
+    display: flex;
+    flex-direction: column;
+    height: 12%;
+    width: 100%;
+    margin-top: 8%;
+}
+.passwordContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 95%;
+    width: 100%;
+}
+.passwordClass{
+    width: 45%;
+}
+.fLetter{
+    color: blue;
+}
+.uLetter{
+    color: brown;
+}
+.nLetter{
+    color: red;
+}
+.dLetter{
+    color: green;
+}
+.oLetter{
+    color: gold;
+}
+.ooLetter{
+    color: skyblue;
+}
+
+.buttonBlock {
+    height: 15%;
+    width: 87%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 8%;
+    margin-right: 14%; 
+}
+
+.buttonContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;  
+    width: 100%; 
+    
+    //border: 1px solid red;
+}
+
+.rightContent{
+    //border: 1px solid green;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightImage{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+}
