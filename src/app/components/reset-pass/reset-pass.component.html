@@ -1,0 +1,56 @@
+<div class="loginPage">
+    <div class="loginContent">
+        <div class="mainContent">
+            <div class="formContent">
+                <div class="fundoologo">
+                    <span class="fLetter">F</span>
+                    <span class="uLetter">U</span>
+                    <span class="nLetter">N</span>
+                    <span class="dLetter">D</span>
+                    <span class="oLetter">O</span>
+                    <span class="ooLetter">O</span>
+                </div>
+                <div class="logoText">Reset Password</div>
+                <div class="heading">Enter new password and confirm password</div>
+
+                <form class="resetForm" [formGroup]="resetpassForm" (ngSubmit)="onSubmit()">
+                <div class="passwordBlock">
+                    <div class="passwordContent">
+                        <mat-form-field style="width: 100%;" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Enter password" formControlName="password" />
+                            <mat-error>password is required!</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <span style="font-size: 12px;">Use 8 or more characters with a mix of letters, numbers & symbols</span>
+                    
+                </div>
+
+                <div class="cpasswordBlock">
+                    <div class="cpasswordContent">
+                        <mat-form-field style="width: 100%;" appearance="outline">
+                            <mat-label>Confirm Password</mat-label>
+                            <input matInput placeholder="Enter password" formControlName="confirmPassword" />
+                            <mat-error>confirm password is required!</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <span style="font-size: 12px;">password and confirm password must be same</span>
+                </div>
+                
+                <div class="buttonBlock">
+                    <div class="buttonContent">
+                        
+                        <div >
+                            <button mat-raised-button color="primary" >Next</button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+</div>

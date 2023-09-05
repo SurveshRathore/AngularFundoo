@@ -13,7 +13,7 @@
 }
 .mainContent{
     height: 90%;
-    width: 60%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
 }
 .leftContent{
     height: 100%;
-    width: 70%;
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,27 +32,51 @@
 
 .formContent{
     height: 90%;
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    //border: 1px solid hotpink;
+    //border: 1px solid rgb(92, 29, 194);
 }
 
 .fundoologo{
     font-size: 22px;
     font-weight: bold;
-    height: 6%;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     
 }
 .logoText{
     font-size: 18px;
-    height: 5%;
+    height: 6%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 .heading{
     font-size: 16px;
-    height: 5%;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.registerForm{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //border: 1px solid hotpink;
 }
 .nameBlock{
     display: flex;
@@ -63,7 +87,7 @@
     width: 100%;
 }
 .firstNameClass{
-    width: 45%;
+    width: 50%;
 }
 .emailBlock{
     display: flex;
@@ -71,27 +95,28 @@
     justify-content: flex-start;
     height: 12%;
     width: 100%;
+    margin-top: 3%;
 }
 .usernameBlock{
-    height: 95%;
-
+    height: 110%;
+    
 }
 .passwordBlock{
     display: flex;
     flex-direction: column;
     height: 12%;
     width: 100%;
-    margin-top: 8%;
+    margin-top: 12%;
 }
 .passwordContent{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 95%;
+    height: 110%;
     width: 100%;
 }
 .passwordClass{
-    width: 45%;
+    width: 50%;
 }
 .fLetter{
     color: blue;
@@ -114,12 +139,12 @@
 
 .buttonBlock {
     height: 15%;
-    width: 87%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 8%;
-    margin-right: 14%; 
+    margin-top: 15%;
+     
 }
 
 .buttonContent{
@@ -127,7 +152,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;  
-    width: 100%; 
+    width: 95%; 
     
     //border: 1px solid red;
 }

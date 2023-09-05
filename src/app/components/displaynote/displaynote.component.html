@@ -1,0 +1,19 @@
+<!-- <p>displaynote works!</p> -->
+<div class="container">
+    <!-- <mat-card class="notes" *ngFor="let note of notesList | filterPipe:searchData" > -->
+    <mat-card class="notes" *ngFor="let note of notesList | filterPipe:searchData" >
+        <div class="main" [style.background]="note.noteColor">
+            <div class="title">
+                <p (click)="OpenDialogBox(note)">{{note.noteTitle}}</p>
+                
+            </div>
+            <div class="description">
+                <p (click)="OpenDialogBox(note)">{{note.noteDesciption}}</p>
+            </div>
+            <div class="icon">
+                <app-icon [trashIcons]="trashIcon" [noteId]="note" (iconEvent)="receiveMessage($event)"></app-icon>
+            </div>
+        </div>
+        
+    </mat-card>
+</div>

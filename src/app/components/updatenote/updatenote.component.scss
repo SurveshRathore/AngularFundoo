@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 500px;
+    box-shadow: 10px;
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    background-color: white;
+    
+}
+.title {
+    font-size: 30px;
+    border: none;
+    outline: none;
+}
+.description  {
+    font-size: 20px;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+}
+.icon {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.closeButton{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

@@ -13,82 +13,75 @@
                     </div>
                     <div class="logoText">Sign Up</div>
                     <div class="heading">to continue to fundoo application</div>
-                    <div class="nameBlock">
-                        <div class="firstNameClass">
-                            <p>
-                                <mat-form-field appearance="outline">
-                                    <mat-label>First Name</mat-label>
-                                    <input matInput placeholder="Enter First Name">
+                    <form class="registerForm" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                        <div class="nameBlock">
+                            <div class="firstNameClass">
+                                <p>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>First Name</mat-label>
+                                        <input matInput placeholder="Enter First Name" formControlName="firstName" />
+                                        <mat-error>First Name is required!</mat-error>
+                                    </mat-form-field>
+                                </p>
+                            </div>
+                            <div class="lastNameClass">
+                                <p>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Last Name</mat-label>
+                                        <input matInput placeholder="Enter Last Name" formControlName="lastName" />
+                                        <mat-error>Last Name is required!</mat-error>
+                                    </mat-form-field>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="emailBlock">
 
+                            <div class="usernameBlock">
+                                <mat-form-field style="width: 93%;" appearance="outline">
+                                    <mat-label>Username</mat-label>
+                                    <input matInput placeholder="Enter email" formControlName="userName" />
+                                    <mat-error>User Name is required!</mat-error>
                                 </mat-form-field>
-                            </p>
+                                
+                            </div>
+                            <span style="margin-top: 3%; padding-top: 0%;">You can use letters,numbers & periods</span>
                         </div>
-                        <div class="lastNameClass">
-                            <p>
-                                <mat-form-field appearance="outline">
-                                    <mat-label>Last Name</mat-label>
-                                    <input matInput placeholder="Enter Last Name">
-
-                                </mat-form-field>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="emailBlock">
-
-                        <div class="usernameBlock">
-                            <mat-form-field style="width: 84%;" appearance="outline">
-                                <mat-label>Username</mat-label>
-                                <input matInput placeholder="Enter email">
-
-                            </mat-form-field>
-                        </div>
+                        <div class="passwordBlock">
+                            <div class="passwordContent">
+                                <div class="passwordClass">
+                                    <p>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Password</mat-label>
+                                            <input matInput placeholder="Enter Password" formControlName="password" />
+                                            <mat-error>Password is required!</mat-error>
+                                        </mat-form-field>
+                                    </p>
+                                </div>
+                                <div class="confirmPasswordClass">
+                                    <p>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Confirm Password</mat-label>
+                                            <input matInput placeholder="Enter Confirm Password" formControlName="confirmPassword" />
+                                            <mat-error>Confirm Password is required!</mat-error>
+                                        </mat-form-field>
+                                    </p>
+                                </div>
+                            </div>
                             
-                        
-                        <span style="margin-top: 0%; padding-top: 0%;">You can use letters,numbers & periods</span>
-
-
-                    </div>
-                    <div class="passwordBlock">
-                        <div class="passwordContent">
-                            <div class="passwordClass">
-                                <p>
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Password</mat-label>
-                                        <input matInput placeholder="password">
-
-                                    </mat-form-field>
-                                </p>
-                            </div>
-                            <div class="confirmPasswordClass">
-                                <p>
-                                    <mat-form-field appearance="outline">
-                                        <mat-label>Confirm</mat-label>
-                                        <input matInput placeholder="confirm password">
-
-                                    </mat-form-field>
-                                </p>
+                                <span style="margin-top: 4%;padding-top: 0%;">Use 8 or more characters with a mix of letters, numbers & symbols</span>
+                            
+                        </div>
+                        <div class="buttonBlock">
+                            <div class="buttonContent">
+                                <div>
+                                    <button routerLink="/" mat-button color="primary">Sign In</button>
+                                </div>
+                                <div>
+                                    <button mat-raised-button color="primary">Next</button>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <span>Use 8 or more characters with a mix of letters, numbers & symbols</span>
-                        </div>
-
-                        
-                    </div>
-                    <div class="buttonBlock">
-                        <div class="buttonContent">
-                            <div>
-                                <button mat-raised-button color="primary">Sign In</button>
-                                
-                            </div>
-                            <div>
-                                <button mat-raised-button color="primary">Next</button>
-                                
-                            </div>
-                        </div>
-                        
-
-                    </div>
+                    </form>
                 </div>
 
             </div>
@@ -101,3 +94,5 @@
         </div>
     </div>
 </div>
+
+<router-outlet></router-outlet>

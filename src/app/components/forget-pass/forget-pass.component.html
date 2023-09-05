@@ -1,0 +1,44 @@
+<div class="loginPage">
+    <div class="loginContent">
+        <div class="mainContent">
+            <div class="formContent">
+                <div class="fundoologo">
+                    <span class="fLetter">F</span>
+                    <span class="uLetter">U</span>
+                    <span class="nLetter">N</span>
+                    <span class="dLetter">D</span>
+                    <span class="oLetter">O</span>
+                    <span class="ooLetter">O</span>
+                </div>
+                <div class="logoText">Forget Password</div>
+                <div class="heading">Enter Email Id to reset password</div>
+
+                <form class="forgetForm" [formGroup] = "forgetpassForm" (ngSubmit)="onSubmit()">
+                <div class="emailBlock">
+                    <div class="usernameBlock">
+                        <mat-form-field style="width: 100%;" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Enter email" formControlName="userName" />
+                            <mat-error>User Name is required!</mat-error>
+                        </mat-form-field>
+                    </div>
+                    
+                </div>
+                
+                <div class="buttonBlock">
+                    <div class="buttonContent">
+                        
+                        <div >
+                            <button mat-raised-button color="primary" >Next</button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+</div>

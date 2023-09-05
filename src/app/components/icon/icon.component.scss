@@ -1,0 +1,52 @@
+.icon{
+    display: flex;
+}
+.icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    border: 0px solid rgba(224, 227, 227, 0.922);
+    width: 280px;
+}
+
+.button{
+    width: 20px;
+    height: 24px;
+    // background: transparent;
+    border: none;
+    border-radius: 40%;
+    padding: 0px;
+    margin: 5px;
+    min-width: 30px;
+    
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    
+}
+
+.colorboxsetting{
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0.5px solid grey;
+}
+.bg-color{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    border-radius: 100px;
+}
+
+.background{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 5px 5px;
+    // max-width: 190px;
+}

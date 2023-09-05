@@ -1,0 +1,109 @@
+.loginPage{
+    height: 100vh;
+    width: 100vw;
+}
+.loginContent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //border: 1px solid yellow;
+}
+
+.mainContent{
+    height: 70%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.formContent{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //border: 1px solid hotpink;
+}
+.fundoologo{
+    font-size: 28px;
+    //font-weight: bold;
+    height: 12%;
+    
+}
+.logoText{
+    font-size: 24px;
+    height: 8%;
+    color: #202124;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-weight: 400;
+}
+.heading{
+    font-size: 16px;
+    height: 8%;
+    color: #202124;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif
+}
+.fLetter{
+    color: blue;
+}
+.uLetter{
+    color: brown;
+}
+.nLetter{
+    color: red;
+}
+.dLetter{
+    color: green;
+}
+.oLetter{
+    color: gold;
+}
+.ooLetter{
+    color: skyblue;
+}
+.forgetForm{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //border: 1px solid rgb(33, 8, 71);
+}
+.emailBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 20%;
+    width: 100%;
+    margin-top: 10px;
+    //border: 1px solid khaki;
+}
+.usernameBlock{
+    height: 95%;
+    width: 100%;
+}
+
+.buttonBlock {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 12%;
+}
+
+.buttonContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;  
+    width: 100%; 
+    //border: 1px solid red;
+}
+

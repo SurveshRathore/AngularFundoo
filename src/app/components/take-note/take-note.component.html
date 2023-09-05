@@ -1,0 +1,33 @@
+<div class="main">
+    <form [formGroup]="takenote" (ngSubmit)="OnSubmit()">
+        <div class="up" (click)="hideAndShow()" *ngIf="show || !show">
+            <input placeholder="Title" class="titleInput" formControlName="title">
+            <div class="titleImgSection">
+                <div *ngIf="ImgOne">
+                    <!-- <mat-icon>check_box</mat-icon> -->
+                    <a class="iconstag1"> <img src="../../../assets/outline_check_box_black_24dp.png" height="25px" title="New List"> </a>
+                    <a class="iconstag2"> <img src="../../../assets/outline_edit_black_24dp.png" height="25px" title="New Note With Drawing"> </a>
+                    <a class="iconstag3"> <img src="../../../assets/outline_image_black_24dp.png" height="25px" title="New Note With Image"> </a>
+                    <!-- <mat-icon>image</mat-icon> -->
+                </div>
+                <span *ngIf="ImgTwo">
+                    <a> <img src="../../../assets/pinicon.PNG" height="25px" title="Pin Note"> </a>
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="show" class="down">
+            <div appearance="fill">
+                <textarea matInput placeholder="Take a note" class="takeanote" formControlName="note"></textarea>
+            </div>
+            <div class="bottomIcon">
+                <div>
+                    <app-icon></app-icon>
+                </div>
+                <div >
+                    <button mat-button (ngSubmit)="OnSubmit()">Close</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

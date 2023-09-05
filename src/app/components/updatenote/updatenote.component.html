@@ -1,0 +1,24 @@
+<!-- 
+<p>update</p>
+<p>{{title}}</p>
+<p>{{desc}}</p> -->
+
+
+
+<mat-card class="container" [style.background]="color">
+    <div class="panel" [style.background]="color">
+        <div>
+            <input class="title" [(ngModel)]="title" [style.background]="color">
+        </div>
+        <div>
+            <input class="description" [(ngModel)]="desc" [style.background]="color">
+        </div>
+        
+        
+        <div class="icon">
+            <app-icon></app-icon>
+            <button mat-button class="closeButton" (click)="CloseDialogBox()" [style.background]="color">Close</button>
+        </div>
+    </div>
+    
+</mat-card>

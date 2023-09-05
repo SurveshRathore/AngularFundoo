@@ -1,0 +1,201 @@
+
+<div class="dashContent">
+  <mat-toolbar class="toolbar">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+          (click)="drawer.toggle()" aria-label="Main Menu">
+          <img src="../../../assets/outline_menu_black_24dp.png">
+      </button>
+      <img src="../../../assets/keepLogo.png"
+          style="height:40px;width:40px;cursor: pointer;" title="Keep">
+      <h2 style="color:gray;font-size:25px;font-family: Google Sans;padding-top: 20px;padding-left: 10px;cursor: pointer;"
+          title="Keep">KEEP</h2>
+      <div class="wholesearchbox">
+          <img style="margin-left: 10px; height: 20px;margin-top: 8px;" src="../../../assets/outline_search_black_24dp.png">
+          <!-- <input class="inputSearchbox" type="search" placeholder="Search" (keyup)="search($event)"> -->
+          <input class="inputSearchbox" (keyup)="searchNote($event)" type="search" placeholder="Search">
+      </div>
+
+      <div class="relise">
+          <button mat-icon-button class="toolbarbuttons">
+              <img src="../../../assets/outline_refresh_black_24dp.png" style="height:26px;width:26px;" title="Refresh">
+          </button>
+
+          <button mat-icon-button class="toolbarbuttons" (click)="toggleNotesView()">
+              <img src="../../../assets/listview.PNG"  style="height:26px;width:26px;"  title="List View">
+          </button>
+
+          <button mat-icon-button class="toolbarbuttons">
+              <img src="../../../assets/outline_settings_black_24dp.png" style="height:26px;width:26px;" title="Settings">
+          </button>
+
+          <button mat-icon-button class="toolbarbuttons">
+              <img src="../../../assets/outline_apps_black_24dp.png" style="height:26px;width:26px;" title="Apps">
+          </button>
+          <button mat-icon-button class="toolbarbuttons" [matMenuTriggerFor]="menu">
+              <img src="../../../assets/outline_person_black_24dp.png"
+                  style="height:26px;width:26px;border-radius: 20px;border: 1px solid black;" title="Profile">
+                  <mat-menu #menu="matMenu">
+                        <button (click)="logOut()" mat-menu-item>LogOut</button>
+                  </mat-menu>
+          </button>
+      </div>
+  </mat-toolbar>
+  <hr style="color:gray">
+</div>
+<div class="downcontainer">
+  <div class="half1" style="width: 70px;height: 800px;">
+      <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+          <img src="../../../assets/outline_lightbulb_black_24dp.png" style="height:26px;width:26px;" title="Refresh">
+      </button>
+      <br>
+      <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+          <img src="../../../assets/outline_notifications_black_24dp.png" style="height:26px;width:26px;" title="Notification">
+      </button>
+      <br>
+      <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+          <img src="../../../assets/outline_edit_black_24dp.png" style="height:26px;width:26px;" title="Edit Labels">
+      </button>
+      <br>
+      <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+          <img src="../../../assets/outline_archive_black_24dp.png" style="height:26px;width:26px;" title="Archive">
+      </button>
+      <br>
+      <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+          <img src="../../../assets/outline_delete_black_24dp.png" style="height:26px;width:26px;" title="Trash">
+      </button>
+  </div>
+  <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+          <div class="half2" style="width: 200px;height: 800px;">
+              <div style="height:48px;margin-top: 20px;" class="labels" routerLink="./getnote" selected>
+                <!-- <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+                    <img src="../../../assets/outline_lightbulb_black_24dp.png" style="height:26px;width:26px;" title="Refresh">
+                </button> -->
+                <h2 style="font-family: Google Sans,Roboto,Arial,sans-serif;padding-left: 10px; color: #202124; font-size: 1rem;">Notes</h2>
+              </div>
+              <div style="height:48px;margin-top: 10px;" class="labels">
+                <!-- <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+                    <img src="../../../assets/outline_notifications_black_24dp.png" style="height:26px;width:26px;" title="Notification">
+                </button> -->
+                <h2 style="font-family: Google Sans,Roboto,Arial,sans-serif;padding-left: 10px; color: #202124; font-size: 1rem;">Reminders</h2>
+              </div>
+              <div style="height:48px;margin-top: 10px;" class="labels">
+                <!-- <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+                    <img src="../../../assets/outline_edit_black_24dp.png" style="height:26px;width:26px;" title="Edit Labels">
+                </button> -->
+                <h2 style="font-family: Google Sans,Roboto,Arial,sans-serif;padding-left: 10px; color: #202124; font-size: 1rem;">Edit Labels</h2>
+              </div>
+              <div style="height:48px;margin-top: 10px;" class="labels" routerLink="./archeive">
+                <!-- <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+                    <img src="../../../assets/archieve.PNG" style="height:26px;width:26px;" title="Archive">
+                </button> -->
+                <h2 style="font-family: Google Sans,Roboto,Arial,sans-serif;padding-left: 10px; color: #202124; font-size: 1rem;">Archive</h2>
+              </div>
+              <div style="height:48px;margin-top: 10px;" class="labels" routerLink="./trash">
+                <!-- <button mat-icon-button class="toolbarbuttons" (click)="drawer.toggle()">
+                    <img src="../../../assets/outline_delete_black_24dp.png" style="height:26px;width:26px;" title="Trash">
+                </button> -->
+                  <h2 style="font-family: Google Sans,Roboto,Arial,sans-serif;padding-left: 10px; color: #202124; font-size: 1rem;">Trash</h2>
+              </div>
+          </div>
+      </mat-drawer>
+  </mat-drawer-container>
+  <div *ngIf="!listView" style="width: 100%;height:fit-content; margin-top: 10px; margin-left: 20px;">
+      <router-outlet></router-outlet>
+  </div>
+
+  <div *ngIf="listView" class="displayNotes">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+
+
+<!-- -------------------------------- -->
+<!-- 
+<div class="layout">
+  <div class="container">
+      <div >
+          <mat-toolbar class="toolbar" >
+              <mat-toolbar-row style="background-color: white;">
+                  <button mat-icon-button>
+                      <mat-icon (click)="sidenav.toggle();" >
+                      <img src="../../../assets/outline_menu_black_24dp.png"> 
+                      </mat-icon>
+                  </button>
+                  <img src="../../../assets/keepLogo.png" style="height: 50px;width: 50px;">
+                  <h1 >
+                      <div class="main-header">
+                          Notes
+                          
+                      </div>
+                  </h1>
+                  <div raised class="search-box">
+                      <img class="search-icon" src="../../../assets/outline_search_black_24dp.png">
+                      <input class="search-input" type="text" placeholder="Search"> 
+                      <span class="clear-icon" >
+                          <button mat-button style="min-width: 30px;" class="clear-button ">
+                              <img src="../../../assets/outline_clear_black_24dp.png" style="height: 30px; width: 30px;">
+                          </button>                            
+                      </span>
+                  </div>
+                  <div class="other-icons">
+                      <div>
+                          <button mat-button class="button">
+                              <img src="../../../assets/outline_refresh_black_24dp.png" style="height: 30px; width: 30px;">
+                          </button>
+                      </div>
+                      <div>
+                          <button mat-button class="button">
+                              <img src="../../../assets/outline_dns_black_24dp.png" style="height: 30px; width: 30px;">
+                          </button>
+                      </div>
+                      <div>
+                          <button mat-button class="button">
+                              <img src="../../../assets/outline_settings_black_24dp.png" style="height: 30px; width: 30px;">
+                          </button>
+                      </div>
+                      <div>
+                        <button mat-button class="button">
+                            <img src="../../../assets/outline_apps_black_24dp.png" style="height: 30px; width: 30px;">
+                        </button>
+                    </div>
+                      <div class="account-button">
+                          <button mat-button  class="button" [matMenuTriggerFor]="menu">
+                              <img src="../../../assets/outline_account_circle_black_24dp.png">
+                                  <mat-menu #menu="matMenu">
+                                  <!-- <button mat-menu-item >LogIn</button>                                    --> <!--
+                                  <button (click)="logOut()" mat-menu-item >LogOut</button>                                    
+                                  </mat-menu>
+                          </button>
+                      </div>
+                  </div>
+              </mat-toolbar-row>  
+          </mat-toolbar>
+          
+          <mat-sidenav-container>
+              <mat-sidenav #sidenav opened="true" mode="side">
+                  <mat-nav-list>
+                      
+                      <a mat-list-item routerLink="./note" class="icons"><img class="list-icons" src="../../../assets/outline_account_circle_black_24dp.png">Notes</a>
+                      <a mat-list-item class="icons"><img class="list-icons" src="../../../assets/outline_notifications_black_24dp.png">Reminders</a>
+                      
+                      <a mat-list-item routerLink="./archive" class="icons"><img class="list-icons" src="../../../assets/outline_archive_black_24dp.png">Archives</a>
+                      <a mat-list-item routerLink="./trash" class="icons"><img class="list-icons" src="../../../assets/outline_delete_black_24dp.png">Bin</a> 
+                      
+                  </mat-nav-list>
+              </mat-sidenav>
+              <mat-sidenav-content >
+                  <div style="height:80vh; background-color: white; margin-top: 10px;">
+                      
+                      <router-outlet> </router-outlet>
+                      
+                      
+                      
+                  </div>
+              </mat-sidenav-content>
+          </mat-sidenav-container>
+      </div>
+  </div>
+</div> -->

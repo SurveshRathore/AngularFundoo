@@ -1,0 +1,70 @@
+<div class="icon-container">
+    <div class="icon" *ngIf="!trashIcons">
+        <div >
+            <button mat-button class="button" title="Remind me">
+                <img src="../../../assets/outline_add_alert_black_24dp.png" style="height: 20px; width: 20px;">
+            </button>
+
+        </div>
+        <div>
+            <button mat-button class="button" title="Collaborator">
+                <img src="../../../assets/outline_person_add_alt_black_24dp.png" style="height: 20px; width: 20px;">
+            </button>
+        </div>
+        <div>
+            <button mat-icon-button class="button" title="background-color" [matMenuTriggerFor]="color">
+                <img src="../../../assets/outline_palette_black_24dp.png" style="height: 20px; width: 20px;">
+            </button>
+            <mat-menu #color="matMenu">
+                <div class="background">
+                    <div class="bg-color" *ngFor="let color of Colours">
+                        <button class="colorboxsetting" (click)="setColor(color)" [style.background]="color.code"></button>
+                    </div>
+                </div>
+            </mat-menu>
+        </div>
+        <div>
+            <button mat-button class="button" title="image">
+                <img src="../../../assets/outline_image_black_24dp.png" style="height: 20px; width: 20px;">
+            </button>
+        </div>
+        <div>
+            <button mat-button class="button" (click)="archiveNote()" title="archive">
+                <img src="../../../assets/outline_archive_black_24dp.png" style="height: 20px; width: 20px;">
+            </button>
+        </div>
+        <div>
+            <!-- <button mat-button class="button" title="undo">
+            <img src="../../../assets/outline_undo_black_24dp.png" style="height: 20px; width: 20px;">
+        </button>
+        <button mat-button class="button" title="redo">
+            <img src="../../../assets/outline_redo_black_24dp.png" style="height: 20px; width: 20px;">
+        </button> -->
+            <button mat-button class="button" [matMenuTriggerFor]="more">
+                <img src="../../../assets/outline_more_vert_black_24dp.png" style="height: 20px; width: 20px;">
+                <mat-menu #more>
+                    <button mat-menu-item (click)="trashNote()">Delete Note</button>
+                    <button mat-menu-item>Add label</button>
+                    <button mat-menu-item>Add Drawing</button>
+                    <button mat-menu-item>Make a copy</button>
+                    <button mat-menu-item>Show tick boxes</button>
+                    <button mat-menu-item>Copy to Google Docs</button>
+                </mat-menu>
+            </button>
+        </div>
+    </div>
+
+    <div class="icon" *ngIf="trashIcons">
+        <div>
+            <button mat-button class="button" title="delforever">
+                <img src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.png" style="height: 20px; width: 20px;">
+            </button>
+        </div>
+        <div>
+            <button mat-button class="button" (click)="untrashNote()" title="trashRestore">
+                <img src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.png" style="height: 20px; width: 20px;">
+            </button>
+        </div>
+
+    </div>
+</div>
